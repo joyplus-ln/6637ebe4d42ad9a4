@@ -69,6 +69,7 @@ public class Sudoku : MonoBehaviour {
 	List<int> notClues = new List<int>();
 
 	void Start () {
+		PlayerPrefs.DeleteAll ();
 		//don't yet show the numbers
 		numbers.SetActive(false);
 		
@@ -157,15 +158,51 @@ public class Sudoku : MonoBehaviour {
 		yield return new WaitForSeconds(0.5f);
 		numbers.transform.GetChild(0).gameObject.SetActive(true);
 	}
+
+	void LoadANSWER()
+	{
+		char[] answers = Generator.getData();
+		Solver Solver = new Solver ();
+		Solver.load (answers);
+		Solver.dfs (0);
+		answers = Solver.getResult ().ToCharArray();
+		Debug.Log ("Answer:" + new string (answers));
+		answers = TransAnswer (answers);
+		Debug.Log ("Answer:" + new string (answers));
+		for(int i = 0; i < 81; i++){
+			if(answers[i] != '.')
+			{
+				cells[i].solution = int.Parse(answers[i].ToString());
+				cells [i].clue = true;
+			}
+
+		}
+			
+	}
+
+	char[] TransAnswer(char[] answer)
+	{
+		int k = 0;
+		char[] answers = new char[81];
+		for(int i = 0;i < 81; i++)
+		{
+			answers [i] = answer[MWC.trans[i] - 1];
+		}
 	
+
+		return answers;
+	}
 	public void generate(){
 		//first, add all empty cells
 		for(int i = 0; i < 81; i++){
 			cells.Add(new cell {solution = 0});
 		}
-		
+		LoadANSWER ();
+		bool needregenerate = false;//regenerate ();
+		needregenerate = false;
 		//if we need to regenerate the puzzle, start again
-		if(regenerate()){
+		if(needregenerate){
+			Debug.Log ("regenerate");
 			cells.Clear();
 			generate();
 			return;
@@ -177,6 +214,7 @@ public class Sudoku : MonoBehaviour {
 	}
 	
 	public bool regenerate(){
+		return false;
 		//for all rows and columns in the grid
 		for(int i = 0; i < 9; i++){
 			for(int I = i * 9; I < i * 9 + 9; I++){
@@ -187,7 +225,7 @@ public class Sudoku : MonoBehaviour {
 				
 				//get the number for this cell
 				int number = getNumber(I);
-				
+				//number = 5;
 				//10 is not possible, so if the number is not 10, use the number as the solution for this cell
 				if(number != 10){
 					cells[I].solution = number;
@@ -260,6 +298,7 @@ public class Sudoku : MonoBehaviour {
 	
 	public void getClues(){
 		//if this try resulted in too much clues, generate clues again
+		#if OLD
 		while(clues() > maxClues){
 			//keep track of the number of attempts
 			clueAttempts++;
@@ -285,6 +324,7 @@ public class Sudoku : MonoBehaviour {
 			//generate clues again
 			generateClues();
 		}
+		#endif
 		
 		//if the clues are alright, go through all cells
 		for(int N = 0; N < 81; N++){
