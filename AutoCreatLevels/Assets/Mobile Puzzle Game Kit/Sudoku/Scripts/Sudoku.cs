@@ -351,7 +351,10 @@ public class Sudoku : MonoBehaviour {
 		//start fading the grid
 		fade = true;
 	}
-	
+	/// <summary>
+    /// 提示
+    /// </summary>
+    /// <returns></returns>
 	public int clues(){
 		int clueCount = 0;
 		
