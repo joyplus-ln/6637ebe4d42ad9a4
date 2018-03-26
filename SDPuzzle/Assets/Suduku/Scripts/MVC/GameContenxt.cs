@@ -25,7 +25,7 @@ public class GameContext : MVCSContext
 		//command
 		commandBinder.Bind(GameEvent.LOAD_SCENE).To<LoadSceneCommand>();
 		commandBinder.Bind (GameEvent.GAME_OVER).To<GameOverCommand> ();
-		commandBinder.Bind(ContextEvent.START).To<StartAppCommand>().Once();
+		commandBinder.Bind(ContextEvent.START).To<StartSdkCommand>().To<StartAppCommand>().Once().InSequence();;
 
 	}
 }
