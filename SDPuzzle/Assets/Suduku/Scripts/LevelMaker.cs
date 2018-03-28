@@ -61,4 +61,15 @@ public class LevelMaker : MonoBehaviour
         sw.Close();
         fs.Close();
     }
+
+    [MenuItem("LevelMaker/CheckAnswer")]
+    public static void CheckAnswer()
+    {
+        
+    }
+
+    static void CheckHasAnswer(string data)
+    {
+        
+    }
 }
