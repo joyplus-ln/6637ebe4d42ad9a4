@@ -23,11 +23,11 @@ public class cell
         int x = index / 9;
         if (index % 9 == 0)
         {
-            horizontal = x + 1;
+            horizontal = x;
         }
         else
         {
-            horizontal = x + 2;
+            horizontal = x + 1;
         }
         int y = index % 9;
         if (index % 9 == 0)
@@ -239,10 +239,13 @@ public class Sudoku : MonoBehaviour
     void LoadANSWER()
     {
         char[] answers = Generator.getData();
-        Solver Solver = new Solver();
-        Solver.load(answers);
-        Solver.dfs(0);
-        answers = Solver.getResult().ToCharArray();
+        string levelstring = AnswerChcek.GetLevel();
+        answers = levelstring.ToCharArray();
+        Debug.Log(levelstring);
+        //Solver Solver = new Solver();
+        //Solver.load(answers);
+        //Solver.dfs(0);
+        //answers = Solver.getResult().ToCharArray();
         answers = TransAnswer(answers);
         for (int i = 0; i < 81; i++)
         {
@@ -251,11 +254,12 @@ public class Sudoku : MonoBehaviour
             {
                 cells[i].solution = int.Parse(answers[i].ToString());
                 cells[i].clue = true;
-                cells[i].index = i;
-                cells[i].SubPosition();
+                
+                
             }
-
+            cells[i].SubPosition();
         }
+        Debug.Log("是否有答案:" + AnswerChcek.CheckAnswerIsRight(cells));
 
     }
 
@@ -266,6 +270,7 @@ public class Sudoku : MonoBehaviour
         for (int i = 0; i < 81; i++)
         {
             answers[i] = answer[MWC.trans[i] - 1];
+            cells[i].index = MWC.trans[i];
         }
 
 
@@ -306,12 +311,12 @@ public class Sudoku : MonoBehaviour
                 GameObject newCell = Instantiate(cell);
 
                 //get the cell label
-                cells[I].label = newCell.transform.GetChild(0).GetComponent<Text>();
+                //cells[I].label = newCell.transform.GetChild(0).GetComponent<Text>();
 
                 //parent the cell to the sub-grid and name it after its index
                 newCell.transform.SetParent(newGrid.transform, false);
                 newCell.name = I + "";
-
+                newCell.GetComponent<Cell>().Init(cells[I]);
                 //get the cell size and assign it to the grid
                 float cellWidth = newRect.rect.width / 3 - (2 * newGridLayout.spacing.x / 3) - (((float)newGridLayout.padding.left + (float)newGridLayout.padding.right) / 3);
                 newGridLayout.cellSize = new Vector2(cellWidth, cellWidth);
