@@ -239,10 +239,13 @@ public class Sudoku : MonoBehaviour
     void LoadANSWER()
     {
         char[] answers = Generator.getData();
-        Solver Solver = new Solver();
-        Solver.load(answers);
-        Solver.dfs(0);
-        answers = Solver.getResult().ToCharArray();
+        string levelstring = AnswerChcek.GetLevel();
+        answers = levelstring.ToCharArray();
+        Debug.Log(levelstring);
+        //Solver Solver = new Solver();
+        //Solver.load(answers);
+        //Solver.dfs(0);
+        //answers = Solver.getResult().ToCharArray();
         answers = TransAnswer(answers);
         for (int i = 0; i < 81; i++)
         {
@@ -252,10 +255,11 @@ public class Sudoku : MonoBehaviour
                 cells[i].solution = int.Parse(answers[i].ToString());
                 cells[i].clue = true;
                 
-                cells[i].SubPosition();
+                
             }
-
+            cells[i].SubPosition();
         }
+        Debug.Log("是否有答案:" + AnswerChcek.CheckAnswerIsRight(cells));
 
     }
 
