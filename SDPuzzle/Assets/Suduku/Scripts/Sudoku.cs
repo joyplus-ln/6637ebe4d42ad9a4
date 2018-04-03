@@ -17,6 +17,8 @@ public class cell
     public int vertical;
     public int box;
 
+
+
     #region 
     public void SubPosition()
     {
@@ -129,6 +131,8 @@ public class Sudoku : MonoBehaviour
 
 
     public Image maxCluesHandle;
+
+    public int currentLevel = 0;
 
     //not visible in the inspector
 
@@ -254,8 +258,8 @@ public class Sudoku : MonoBehaviour
             {
                 cells[i].solution = int.Parse(answers[i].ToString());
                 cells[i].clue = true;
-                
-                
+
+
             }
             cells[i].SubPosition();
         }
@@ -366,5 +370,26 @@ public class Sudoku : MonoBehaviour
         //if we can load a new puzzle, restart the current scene
         if (newButton.color.a == 1)
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public string GetCurrentLevels()
+    {
+
+        int level = PlayerPrefs.GetInt("CurrentLevel", 1);
+        string levelstring = "";
+        if (currentLevel == level)
+        {
+            levelstring = PlayerPrefs.GetString("LevelProgress", "");
+        }
+        else
+        {
+            levelstring = AnswerChcek.GetLevel();
+        }
+        return levelstring;
+    }
+
+    public void CheckWin()
+    {
+        AnswerChcek.CheckAnswerIsRight(cells);
     }
 }

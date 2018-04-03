@@ -54,10 +54,10 @@ public class AnswerChcek  {
         return true;
     }
 
-    public static string GetLevel()
+    public static string GetLevel(int level = 0)
     {
         TextAsset text = Resources.Load<TextAsset>("MakeLevels777");
         string[] levels = text.text.Split(',');
-        return levels[0];
+        return levels[level];
     }
 }
