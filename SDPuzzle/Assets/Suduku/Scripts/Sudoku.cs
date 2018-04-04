@@ -390,6 +390,21 @@ public class Sudoku : MonoBehaviour
 
     public void CheckWin()
     {
-        AnswerChcek.CheckAnswerIsRight(cells);
+        bool win = AnswerChcek.CheckAnswerIsRight(cells);
+        if(win)Debug.Log("Game Win");
+    }
+
+    public void OnDraged(cell cel)
+    {
+       bool itRight = AnswerChcek.CheckCellIsRight(cells,cel);
+        if (!itRight)
+        {
+            cel.label.color = Color.red;
+        }
+        else
+        {
+            cel.label.color = Color.green;
+        }
+        CheckWin();
     }
 }
