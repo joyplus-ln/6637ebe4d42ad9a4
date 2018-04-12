@@ -2,8 +2,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Suduku/Scripts/MVC/View/Map/MapLocation.cs">
     <Files>
-      <File FileName="Assets/Suduku/Scripts/MVC/View/Map/MapLocation.cs" Line="42" Column="1" />
-      <File FileName="Assets/Suduku/Scripts/MVC/View/Map/MapWorld.cs" Line="343" Column="35" />
+      <File FileName="Assets/Suduku/Scripts/MVC/View/Map/MapWorld.cs" Line="1" Column="1" />
+      <File FileName="Assets/Suduku/Scripts/MVC/Model/ILevel.cs" Line="1" Column="1" />
+      <File FileName="Assets/Suduku/Scripts/MVC/View/Map/MapLocation.cs" Line="38" Column="2" />
       <File FileName="Assets/Suduku/Scripts/sodoEngine/MWC.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/view/ExampleView.cs" Line="1" Column="1" />
       <File FileName="../../../UnityProject/Berry+Match-Three+v4.2/Assets/_Yurowm/Match-Tree Engine/Scripts/UI/LevelMap.cs" Line="1" Column="1" />
@@ -17,12 +18,11 @@
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/GameRoot.cs" Line="1" Column="1" />
       <File FileName="Assets/Suduku/Scripts/MVC/GameStart.cs" Line="1" Column="1" />
       <File FileName="Assets/Suduku/Scripts/MVC/GameContenxt.cs" Line="1" Column="1" />
-      <File FileName="Assets/Suduku/Scripts/MVC/Model/LevelModel.cs" Line="1" Column="1" />
+      <File FileName="Assets/Suduku/Scripts/MVC/Model/LevelModel.cs" Line="20" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/model/ExampleModel.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/model/IExampleModel.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/model/IScore.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/model/ScoreModel.cs" Line="1" Column="1" />
-      <File FileName="Assets/Suduku/Scripts/MVC/Model/ILevel.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/controller/startupSequence/StartAppCommand.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/controller/startupSequence/StartGameCommand.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/controller/GameOverCommand.cs" Line="1" Column="1" />
@@ -66,18 +66,11 @@
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/MyFirstContext.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/scripts/strange/extensions/command/impl/EventCommand.cs" Line="1" Column="1" />
       <File FileName="Assets/ThirdParty/IronSource/Scripts/IronSourceEvents.cs" Line="1" Column="1" />
+      <File FileName="Assets/Suduku/Scripts/MVC/View/Map/MapLevelButton.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/zxy/Documents/GitProject/suduP/SDPuzzle/Assets/Suduku/Scripts/MVC/View/Map/MapWorld.cs" line="190" column="1" />
-      <Breakpoint file="/Users/zxy/Documents/GitProject/suduP/SDPuzzle/Assets/Suduku/Scripts/MVC/View/Map/MapWorld.cs" line="196" column="1" />
-      <Breakpoint file="/Users/zxy/Documents/GitProject/suduP/SDPuzzle/Assets/Suduku/Scripts/MVC/View/Map/MapWorld.cs" line="282" column="1" />
-      <Breakpoint file="/Users/zxy/Documents/GitProject/suduP/SDPuzzle/Assets/Suduku/Scripts/MVC/View/Map/MapWorld.cs" line="172" column="1" />
-      <Breakpoint file="/Users/zxy/Documents/GitProject/suduP/SDPuzzle/Assets/Suduku/Scripts/MVC/View/Map/MapWorld.cs" line="290" column="1" />
-      <Breakpoint file="/Users/zxy/Documents/GitProject/suduP/SDPuzzle/Assets/Suduku/Scripts/MVC/View/Map/MapWorld.cs" line="295" column="1" />
-      <Breakpoint file="/Users/zxy/Documents/GitProject/suduP/SDPuzzle/Assets/Suduku/Scripts/MVC/View/Map/MapWorld.cs" line="294" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -9,5 +9,6 @@ public class GameStart : ContextView {
 	{
 		//启动框架
 		context = new GameContext(this);
+		DontDestroyOnLoad (gameObject);
 	}
 }
