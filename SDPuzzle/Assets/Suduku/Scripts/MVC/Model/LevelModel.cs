@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelModel : ILevel {
-	#region ILevel implementation
 
-	void ILevel.UnlockLevel (int level)
+	private int m_UnlockLevel;
+	#region ILevel implementation
+	void UnlockLevel (int level)
 	{
-		throw new System.NotImplementedException ();
+		m_UnlockLevel = level; 
+		Utils.SetInt (PrefKeys.UnlockLevel, level);
 	}
 
-	int ILevel.unLocklevel {
-		get {
-			throw new System.NotImplementedException ();
+	int unLocklevel 
+	{
+		get 
+		{
+			return m_UnlockLevel;
 		}
 	}
 

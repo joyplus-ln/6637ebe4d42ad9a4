@@ -12,3 +12,8 @@ public enum WorldLevel
 	Map,
 	Play
 }
+
+public class PrefKeys
+{
+	public const string UnlockLevel = "1";
+}
