@@ -19,7 +19,7 @@ public class GameContext : MVCSContext
 	protected override void mapBindings()
 	{
 		//model
-		injectionBinder.Bind<LevelModel>().To<LevelModel>().ToSingleton(); //模型数据绑定为单例模式
+		injectionBinder.Bind<ILevel>().To<LevelModel>().ToSingleton(); //模型数据绑定为单例模式
 		mediationBinder.Bind<MapLevelButton>().To<MapLevelMediator>();
 
 		//command

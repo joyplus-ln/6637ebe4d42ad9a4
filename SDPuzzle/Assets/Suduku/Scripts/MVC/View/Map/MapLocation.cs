@@ -34,7 +34,7 @@ public class MapLocation : View {
 			button.transform.localPosition=Vector3.zero;
 			button.transform.localRotation=Quaternion.identity;
 			MapLevelButton script = button.GetComponent<MapLevelButton> ();
-			script.levelnumText.text = (number * levelButtonParent.childCount + i + 1).ToString();
+			script.levelIndex = number * levelButtonParent.childCount + i + 1;
 		}
 	}
 

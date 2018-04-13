@@ -8,10 +8,13 @@ public class MapLevelMediator : EventMediator
 	[Inject]
 	public MapLevelButton view{ get; set;}
 
+	[Inject]
+	public ILevel model{ get; set;}
 
 	public override void OnRegister()
 	{
 		view.dispatcher.AddListener (MapLevelButton.CLICK_EVENT, onViewClicked);
+		view.Init (model.unlocklevel);
 	}
 
 	public override void OnRemove()
