@@ -10,7 +10,6 @@ public static class Utils
 
     public static void GoToPlayScene(int level)
     {
-        SetCurrentLevel(level);
         SceneManager.LoadSceneAsync(2);
     }
 
@@ -18,19 +17,7 @@ public static class Utils
     {
         SceneManager.LoadSceneAsync(1);
     }
-
-
-    public static int GetCurrentLevel()
-    {
-        return PlayerPrefs.GetInt("CurrentLevel", 1);
-    }
-
-    public static void SetCurrentLevel(int level)
-    {
-        PlayerPrefs.SetInt("CurrentLevel", level);
-    }
-
-
+		
     public static int GetMaxUnlockLevel()
     {
         return PlayerPrefs.GetInt("MaxUnlockLevel", 1);

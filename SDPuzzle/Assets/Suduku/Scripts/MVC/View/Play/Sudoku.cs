@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Text;
+using strange.extensions.mediation.impl;
 
 [System.Serializable]
 public class cell
@@ -90,8 +91,10 @@ public class cell
     #endregion
 }
 
-public class Sudoku : MonoBehaviour
+public class Sudoku : EventView
 {
+	[Inject]
+	public ILevel model { get; set;}
 
     public enum clueGenerator
     {
@@ -152,6 +155,8 @@ public class Sudoku : MonoBehaviour
 
     void Start()
     {
+		base.Start ();
+
         //PlayerPrefs.DeleteAll ();
         //don't yet show the numbers
         numbers.SetActive(false);
@@ -245,7 +250,7 @@ public class Sudoku : MonoBehaviour
     void LoadANSWER()
     {
         char[] answers = Generator.getData();
-        string levelstring = AnswerChcek.GetLevel(Utils.GetCurrentLevel());
+		string levelstring = AnswerChcek.GetLevel(model.currentlevel-1);
         answers = levelstring.ToCharArray();
         Debug.Log(levelstring);
         //Solver Solver = new Solver();
@@ -377,7 +382,7 @@ public class Sudoku : MonoBehaviour
     public string GetCurrentLevels()
     {
 
-        int level = Utils.GetCurrentLevel();
+		int level = model.currentlevel;
         string levelstring = "";
         if (currentLevel == level)
         {

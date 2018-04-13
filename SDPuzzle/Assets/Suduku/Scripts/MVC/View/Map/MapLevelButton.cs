@@ -8,6 +8,7 @@ public class MapLevelButton : EventView {
 	public TextMesh levelnumText;
 	public Animation animaton;
 	public int levelIndex;
+	private int _unlockLevel;
 
 	public const string CLICK_EVENT = "CLICK_EVENT";
 	[Inject]
@@ -17,6 +18,7 @@ public class MapLevelButton : EventView {
 	{
 		levelnumText.text = levelIndex.ToString ();
 
+		_unlockLevel = unlockLevel;
 		if (levelIndex > unlockLevel) 
 		{
 			animaton.enabled = false;
@@ -26,6 +28,12 @@ public class MapLevelButton : EventView {
 
 	public void OnClick()
 	{
+		if (levelIndex > _unlockLevel) 
+		{
+			return;
+		}
+
+
 		dispatcher.Dispatch(CLICK_EVENT);
 	}
 }

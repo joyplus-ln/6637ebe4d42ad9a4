@@ -25,6 +25,8 @@ public class MapLevelMediator : EventMediator
 	private void onViewClicked()
 	{
 		Debug.Log("View click detected");
+
+		model.currentlevel = view.levelIndex;
 		dispatcher.Dispatch(GameEvent.LOAD_SCENE, WorldLevel.Play.ToString());
 	}
 

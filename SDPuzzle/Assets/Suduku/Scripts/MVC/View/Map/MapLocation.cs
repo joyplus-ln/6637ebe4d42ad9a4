@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using strange.extensions.mediation.impl;
 
-public class MapLocation : View {
+public class MapLocation : MonoBehaviour {
 	public Transform nextLocationConnector;
 	public Transform previousLocationConnector;
 	public Transform levelButtonParent;

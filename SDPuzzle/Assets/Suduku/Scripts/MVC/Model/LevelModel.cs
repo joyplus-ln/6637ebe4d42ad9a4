@@ -7,6 +7,7 @@ public class LevelModel : ILevel {
 	public LevelModel()
 	{
 		m_UnlockLevel = Utils.GetInt(PrefKeys.UnlockLevel, 1);
+		maxlevel = 50;
 	}
 
 	private int m_UnlockLevel;
@@ -44,6 +45,8 @@ public class LevelModel : ILevel {
 		}
 	}
 
+	public int currentlevel { get; set;}
+	public int maxlevel { get; set;}
 	#endregion
 
 
