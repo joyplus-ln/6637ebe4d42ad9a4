@@ -24,6 +24,7 @@ public class WinView : EventView
     {
 		if (model.currentlevel == model.unlocklevel)
         {
+			model.currentlevel++;
 			model.UnlockLevel ();
         }
 		dispatcher.Dispatch(CLICK_EVENT);

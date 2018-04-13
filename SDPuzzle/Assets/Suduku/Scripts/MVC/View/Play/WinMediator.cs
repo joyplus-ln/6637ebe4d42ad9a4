@@ -25,6 +25,6 @@ public class WinMediator : EventMediator
 	private void onViewClicked()
 	{
 		Debug.Log("Win view click detected");
-		dispatcher.Dispatch(GameEvent.LOAD_SCENE, WorldLevel.Map.ToString());
+		dispatcher.Dispatch(GameEvent.LOAD_SCENE, WorldLevel.Play.ToString());
 	}
 }
