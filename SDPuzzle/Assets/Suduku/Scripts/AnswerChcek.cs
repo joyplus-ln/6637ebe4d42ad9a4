@@ -87,7 +87,7 @@ public class AnswerChcek
 
     public static string GetLevel(int level = 0)
     {
-        TextAsset text = Resources.Load<TextAsset>("MakeLevels777");
+        TextAsset text = Resources.Load<TextAsset>("LevelsSD");
         string[] levels = text.text.Split(',');
         return levels[level];
     }
