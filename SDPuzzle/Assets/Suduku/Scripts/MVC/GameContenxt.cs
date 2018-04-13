@@ -23,6 +23,7 @@ public class GameContext : MVCSContext
 
 		//view
 		mediationBinder.Bind<MapLevelButton>().To<MapLevelMediator>();
+		mediationBinder.Bind<Sudoku>().To<SudokuMediator>();
 		mediationBinder.Bind<WinView>().To<WinMediator>();
 		//command
 		commandBinder.Bind(GameEvent.LOAD_SCENE).To<LoadSceneCommand>();
