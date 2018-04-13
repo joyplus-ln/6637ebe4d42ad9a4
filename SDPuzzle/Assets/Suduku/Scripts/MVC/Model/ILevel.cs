@@ -2,7 +2,7 @@
 
 public interface ILevel
 {
-	int unLocklevel{ get;}
+	int unlocklevel{ get;}
 	void UnlockLevel(int level);
 
 }

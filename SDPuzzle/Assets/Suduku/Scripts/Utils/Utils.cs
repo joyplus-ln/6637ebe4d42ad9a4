@@ -68,4 +68,62 @@ public static class Utils{
 	{
 		SetInt(key, value ? 1 : 0);
 	}
+
+	public static int GetInt(string key, int defaultValue)
+	{
+		if (!PlayerPrefs.HasKey(key))
+		{
+			return defaultValue;
+		}
+
+		return PlayerPrefs.GetInt(key);
+	}
+
+	public static int GetInt(string key)
+	{
+		return GetInt(key, 0);
+	}
+
+	public static long GetLong(string key, long defaultValue)
+	{
+		return long.Parse(GetString(key, defaultValue.ToString()));
+	}
+
+	public static long GetLong(string key)
+	{
+		return GetLong(key, 0);
+	}
+
+	public static string GetString(string key, string defaultValue)
+	{
+		if (!PlayerPrefs.HasKey(key))
+		{
+			return defaultValue;
+		}
+
+		return PlayerPrefs.GetString (key);
+	}
+
+	public static string GetString(string key)
+	{
+		return GetString(key, "");
+	}
+
+	public static float GetFloat(string key, float defaultValue)
+	{
+		return float.Parse(GetString(key, defaultValue.ToString()));
+	}
+
+	public static float GetFloat(string key)
+	{
+		return GetFloat(key, 0);
+	}
+
+	public static bool GetBool(string key, bool defaultValue = false)
+	{
+		if (!HasKey(key))
+			return defaultValue;
+
+		return GetInt(key) == 1;
+	}
 }
