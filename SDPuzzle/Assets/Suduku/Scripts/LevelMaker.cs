@@ -15,12 +15,13 @@ public class LevelMaker : MonoBehaviour
     [MenuItem("LevelMaker/MakeLevel")]
     public static void MakeLevels()
     {
-        string name = Application.dataPath + "/" + string.Format("MakeLevels{0}.txt",777);
-       // File.Create(name);
+        string name = Application.dataPath + "/" + string.Format("Levels{0}.txt", "SD");
+        // File.Create(name);
         FileStream fs = new FileStream(name, FileMode.Append, FileAccess.Write);
         StreamWriter sw = new StreamWriter(fs);
-        
-        
+        int level = 5;
+        int time = 0;
+
         LevelGenerator lgGenerator = new LevelGenerator();
         char[] data;
         char[] temp = new char[81];
@@ -55,8 +56,15 @@ public class LevelMaker : MonoBehaviour
             Solver.load(data);
             Solver.dfs(0);
             data = Solver.getResult().ToCharArray();
+            time++;
+            if (time > 15)
+            {
+                time = 0;
+                level++;
+            }
+            data = HandleLevelWithDot(data, level);
             sw.WriteLine(data);
-
+            sw.Write(',');
         }
         sw.Close();
         fs.Close();
@@ -65,11 +73,21 @@ public class LevelMaker : MonoBehaviour
     [MenuItem("LevelMaker/CheckAnswer")]
     public static void CheckAnswer()
     {
-        
+
     }
 
     static void CheckHasAnswer(string data)
     {
-        
+
+    }
+
+    static char[] HandleLevelWithDot(char[] data, int levels)
+    {
+        System.Random random = new System.Random();
+        for (int i = 0; i < levels; i++)
+        {
+            data[random.Next(data.Length - 1)] = '.';
+        }
+        return data;
     }
 }

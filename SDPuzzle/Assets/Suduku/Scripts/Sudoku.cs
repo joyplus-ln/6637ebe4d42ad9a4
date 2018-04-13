@@ -147,6 +147,8 @@ public class Sudoku : MonoBehaviour
     [HideInInspector]
     public List<cell> cells = new List<cell>();
     List<int> notClues = new List<int>();
+    [SerializeField]
+    private GameObject win;
 
     void Start()
     {
@@ -243,7 +245,7 @@ public class Sudoku : MonoBehaviour
     void LoadANSWER()
     {
         char[] answers = Generator.getData();
-        string levelstring = AnswerChcek.GetLevel();
+        string levelstring = AnswerChcek.GetLevel(Utils.GetCurrentLevel());
         answers = levelstring.ToCharArray();
         Debug.Log(levelstring);
         //Solver Solver = new Solver();
@@ -375,7 +377,7 @@ public class Sudoku : MonoBehaviour
     public string GetCurrentLevels()
     {
 
-        int level = PlayerPrefs.GetInt("CurrentLevel", 1);
+        int level = Utils.GetCurrentLevel();
         string levelstring = "";
         if (currentLevel == level)
         {
@@ -391,12 +393,12 @@ public class Sudoku : MonoBehaviour
     public void CheckWin()
     {
         bool win = AnswerChcek.CheckAnswerIsRight(cells);
-        if(win)Debug.Log("Game Win");
+        if (win) WinGame();
     }
 
     public void OnDraged(cell cel)
     {
-       bool itRight = AnswerChcek.CheckCellIsRight(cells,cel);
+        bool itRight = AnswerChcek.CheckCellIsRight(cells, cel);
         if (!itRight)
         {
             cel.label.color = Color.red;
@@ -406,5 +408,11 @@ public class Sudoku : MonoBehaviour
             cel.label.color = Color.green;
         }
         CheckWin();
+    }
+
+    void WinGame()
+    {
+        GameObject winobj = Instantiate(win);
+        winobj.transform.SetParent(transform.parent, false);
     }
 }
