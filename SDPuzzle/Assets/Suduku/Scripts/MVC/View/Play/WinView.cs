@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using strange.extensions.mediation.impl;
+using strange.extensions.dispatcher.eventdispatcher.api;
 
-public class Win : EventView
+public class WinView : EventView
 {
+	public const string CLICK_EVENT = "Complete";
 	[Inject]
 	public ILevel model{ get; set;}
+
+	[Inject]
+	public IEventDispatcher dispatcher{get;set;}
+
     // Use this for initialization
-    void Start()
+    public void Init()
     {
         transform.DOScale(Vector3.one, 0.5f);
     }
@@ -20,6 +26,6 @@ public class Win : EventView
         {
 			model.UnlockLevel ();
         }
-        Utils.GoToMapScene();
+		dispatcher.Dispatch(CLICK_EVENT);
     }
 }

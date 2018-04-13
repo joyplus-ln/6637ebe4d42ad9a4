@@ -20,8 +20,10 @@ public class GameContext : MVCSContext
 	{
 		//model
 		injectionBinder.Bind<ILevel>().To<LevelModel>().ToSingleton(); //模型数据绑定为单例模式
-		mediationBinder.Bind<MapLevelButton>().To<MapLevelMediator>();
 
+		//view
+		mediationBinder.Bind<MapLevelButton>().To<MapLevelMediator>();
+		mediationBinder.Bind<WinView>().To<WinMediator>();
 		//command
 		commandBinder.Bind(GameEvent.LOAD_SCENE).To<LoadSceneCommand>();
 		commandBinder.Bind (GameEvent.GAME_OVER).To<GameOverCommand> ();
