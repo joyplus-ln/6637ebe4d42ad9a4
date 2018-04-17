@@ -421,4 +421,9 @@ public class Sudoku : EventView
         GameObject winobj = Instantiate(win);
         winobj.transform.SetParent(transform.parent, false);
     }
+
+    public void Back()
+    {
+        SceneManager.LoadSceneAsync(1);
+    }
 }
