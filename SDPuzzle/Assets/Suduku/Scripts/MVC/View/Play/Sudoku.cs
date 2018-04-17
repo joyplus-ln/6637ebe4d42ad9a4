@@ -250,7 +250,7 @@ public class Sudoku : EventView
     void LoadANSWER()
     {
         char[] answers = Generator.getData();
-		string levelstring = AnswerChcek.GetLevel(model.currentlevel-1);
+		string levelstring = AnswerChcek.GetLevel(model.currentlevel-1).Trim();
         answers = levelstring.ToCharArray();
         Debug.Log(levelstring);
         //Solver Solver = new Solver();
@@ -263,6 +263,7 @@ public class Sudoku : EventView
 
             if (answers[i] != '.')
             {
+                Debug.Log(answers[i]);
                 cells[i].solution = int.Parse(answers[i].ToString());
                 cells[i].clue = true;
 
