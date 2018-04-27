@@ -93,8 +93,8 @@ public class cell
 
 public class Sudoku : EventView
 {
-	[Inject]
-	public ILevel model { get; set;}
+    [Inject]
+    public ILevel model { get; set; }
 
     public enum clueGenerator
     {
@@ -155,7 +155,7 @@ public class Sudoku : EventView
 
     void Start()
     {
-		base.Start ();
+        base.Start();
 
         //PlayerPrefs.DeleteAll ();
         //don't yet show the numbers
@@ -250,7 +250,7 @@ public class Sudoku : EventView
     void LoadANSWER()
     {
         char[] answers = Generator.getData();
-		string levelstring = AnswerChcek.GetLevel(model.currentlevel-1).Trim();
+        string levelstring = AnswerChcek.GetLevel(model.currentlevel - 1).Trim();
         answers = levelstring.ToCharArray();
         Debug.Log(levelstring);
         //Solver Solver = new Solver();
@@ -383,7 +383,7 @@ public class Sudoku : EventView
     public string GetCurrentLevels()
     {
 
-		int level = model.currentlevel;
+        int level = model.currentlevel;
         string levelstring = "";
         if (currentLevel == level)
         {
