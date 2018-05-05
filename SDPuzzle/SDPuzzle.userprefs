@@ -1,12 +1,12 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Suduku/Scripts/MVC/View/Map/MapLocation.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Suduku/Scripts/MVC/GameContenxt.cs">
     <Files>
+      <File FileName="Assets/Suduku/Scripts/MVC/View/Map/MapLevelMediator.cs" Line="31" Column="3" />
       <File FileName="Assets/Suduku/Scripts/MVC/View/Map/MapWorld.cs" Line="1" Column="1" />
-      <File FileName="Assets/Suduku/Scripts/MVC/Model/ILevel.cs" Line="1" Column="1" />
-      <File FileName="Assets/Suduku/Scripts/MVC/View/Map/MapLocation.cs" Line="38" Column="2" />
-      <File FileName="Assets/Suduku/Scripts/sodoEngine/MWC.cs" Line="1" Column="1" />
-      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/view/ExampleView.cs" Line="1" Column="1" />
+      <File FileName="Assets/Suduku/Scripts/MVC/View/Map/MapLocation.cs" Line="6" Column="41" />
+      <File FileName="Assets/Suduku/Scripts/sodoEngine/MWC.cs" Line="2" Column="17" />
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/view/ExampleView.cs" Line="42" Column="3" />
       <File FileName="../../../UnityProject/Berry+Match-Three+v4.2/Assets/_Yurowm/Match-Tree Engine/Scripts/UI/LevelMap.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/scripts/strange/framework/api/IBinder.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/scripts/strange/framework/api/IInstanceProvider.cs" Line="1" Column="1" />
@@ -16,43 +16,37 @@
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/ReadMe.txt" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/main/MainRoot.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/GameRoot.cs" Line="1" Column="1" />
-      <File FileName="Assets/Suduku/Scripts/MVC/GameStart.cs" Line="1" Column="1" />
-      <File FileName="Assets/Suduku/Scripts/MVC/GameContenxt.cs" Line="1" Column="1" />
-      <File FileName="Assets/Suduku/Scripts/MVC/Model/LevelModel.cs" Line="20" Column="1" />
+      <File FileName="Assets/Suduku/Scripts/MVC/GameStart.cs" Line="12" Column="34" />
+      <File FileName="Assets/Suduku/Scripts/MVC/Model/LevelModel.cs" Line="10" Column="16" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/model/ExampleModel.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/model/IExampleModel.cs" Line="1" Column="1" />
-      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/model/IScore.cs" Line="1" Column="1" />
-      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/model/ScoreModel.cs" Line="1" Column="1" />
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/model/IScore.cs" Line="21" Column="25" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/controller/startupSequence/StartAppCommand.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/controller/startupSequence/StartGameCommand.cs" Line="1" Column="1" />
-      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/controller/GameOverCommand.cs" Line="1" Column="1" />
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/controller/GameOverCommand.cs" Line="27" Column="10" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/main/controller/MainEvent.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/main/controller/StartCommand.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/main/controller/LoadSceneCommand.cs" Line="1" Column="1" />
-      <File FileName="Assets/Suduku/Scripts/MVC/Controller/LoadSceneCommand.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/main/controller/GameCompleteCommand.cs" Line="1" Column="1" />
-      <File FileName="Assets/StrangeIoC/scripts/strange/extensions/context/api/ContextKeys.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/controller/GameEvent.cs" Line="1" Column="1" />
-      <File FileName="Assets/Suduku/Scripts/MVC/Controller/StartAppCommand.cs" Line="1" Column="1" />
+      <File FileName="Assets/Suduku/Scripts/MVC/Controller/StartAppCommand.cs" Line="10" Column="72" />
       <File FileName="Assets/Suduku/Scripts/MVC/Controller/GameOverCommand.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/ReadMe.txt" Line="1" Column="1" />
-      <File FileName="Assets/Suduku/Scripts/MVC/Controller/Common.cs" Line="1" Column="1" />
-      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/controller/ExampleEvent.cs" Line="1" Column="1" />
-      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/controller/StartCommand.cs" Line="1" Column="1" />
+      <File FileName="Assets/Suduku/Scripts/MVC/Controller/Common.cs" Line="18" Column="33" />
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/controller/StartCommand.cs" Line="29" Column="20" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/controller/CallWebServiceCommand.cs" Line="1" Column="1" />
       <File FileName="Assets/Suduku/Scripts/sodoEngine/LevelGenerator.cs" Line="1" Column="1" />
       <File FileName="Assets/Suduku/Scripts/sodoEngine/Generator.cs" Line="1" Column="1" />
       <File FileName="Assets/Suduku/Scripts/sodoEngine/Solver.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/view/ClickDetector.cs" Line="1" Column="1" />
-      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/view/EnemyView.cs" Line="1" Column="1" />
-      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/view/ShipView.cs" Line="1" Column="1" />
-      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/view/EnemyMediator.cs" Line="1" Column="1" />
-      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/view/ScoreboardMediator.cs" Line="1" Column="1" />
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/view/EnemyView.cs" Line="25" Column="36" />
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/view/ShipView.cs" Line="48" Column="13" />
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/view/EnemyMediator.cs" Line="39" Column="17" />
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/view/ScoreboardMediator.cs" Line="30" Column="10" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/view/ClickDetector.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/scripts/strange/extensions/mediation/impl/EventMediator.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/view/ScoreboardView.cs" Line="1" Column="1" />
       <File FileName="Assets/Suduku/Scripts/DragNumber.cs" Line="1" Column="1" />
-      <File FileName="Assets/Suduku/Scripts/Sudoku.cs" Line="1" Column="1" />
       <File FileName="Assets/Suduku/Scripts/MVC/Controller/MapCommand.cs" Line="1" Column="1" />
       <File FileName="Assets/Suduku/Scripts/MVC/Controller/StartSdkCommand.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/controller/ShipDestroyedCommand.cs" Line="1" Column="1" />
@@ -61,12 +55,34 @@
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/main/MainContext.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/util/GameLoop.cs" Line="1" Column="1" />
       <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/controller/RemoveSocialContextCommand.cs" Line="1" Column="1" />
-      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/GameContext.cs" Line="1" Column="1" />
-      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/view/ShipMediator.cs" Line="1" Column="1" />
-      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/MyFirstContext.cs" Line="1" Column="1" />
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/view/ShipMediator.cs" Line="31" Column="43" />
       <File FileName="Assets/StrangeIoC/scripts/strange/extensions/command/impl/EventCommand.cs" Line="1" Column="1" />
       <File FileName="Assets/ThirdParty/IronSource/Scripts/IronSourceEvents.cs" Line="1" Column="1" />
-      <File FileName="Assets/Suduku/Scripts/MVC/View/Map/MapLevelButton.cs" Line="1" Column="1" />
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/view/ExampleMediator.cs" Line="15" Column="46" />
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/MyFirstProjectRoot.cs" Line="28" Column="25" />
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/controller/ExampleEvent.cs" Line="7" Column="3" />
+      <File FileName="Assets/Suduku/Scripts/MVC/View/Map/MapLevelButton.cs" Line="37" Column="3" />
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/myfirstproject/MyFirstContext.cs" Line="41" Column="19" />
+      <File FileName="Assets/StrangeIoC/scripts/strange/extensions/context/impl/MVCSContext.cs" Line="186" Column="42" />
+      <File FileName="Assets/StrangeIoC/scripts/strange/extensions/mediation/impl/Mediator.cs" Line="34" Column="35" />
+      <File FileName="Assets/StrangeIoC/scripts/strange/extensions/mediation/api/IView.cs" Line="30" Column="24" />
+      <File FileName="Assets/Suduku/Scripts/MVC/Model/Cell.cs" Line="21" Column="2" />
+      <File FileName="Assets/Suduku/Scripts/MVC/Model/ILevel.cs" Line="7" Column="14" />
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/util/IGameTimer.cs" Line="1" Column="1" />
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/model/ScoreModel.cs" Line="25" Column="34" />
+      <File FileName="Assets/Suduku/Scripts/Utils/Utils.cs" Line="9" Column="6" />
+      <File FileName="Assets/StrangeIoC/scripts/strange/extensions/mediation/impl/MediationBinder.cs" Line="1" Column="1" />
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/multiplecontexts/game/controller/UpdateScoreCommand.cs" Line="26" Column="10" />
+      <File FileName="Assets/StrangeIoC/scripts/strange/extensions/injector/api/IInjectionBinding.cs" Line="56" Column="32" />
+      <File FileName="Assets/Suduku/Scripts/LevelMaker.cs" Line="14" Column="6" />
+      <File FileName="Assets/Suduku/Scripts/MVC/View/Play/Sudoku.cs" Line="253" Column="65" />
+      <File FileName="Assets/Suduku/Scripts/MVC/View/Play/SudokuMediator.cs" Line="8" Column="1" />
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/signalsproject/model/ExampleModel.cs" Line="9" Column="3" />
+      <File FileName="Assets/StrangeIoC/examples/Assets/scripts/signalsproject/model/IExampleModel.cs" Line="1" Column="1" />
+      <File FileName="Assets/Suduku/Scripts/MVC/Controller/LoadSceneCommand.cs" Line="6" Column="30" />
+      <File FileName="Assets/Suduku/Scripts/MVC/View/Play/WinMediator.cs" Line="28" Column="60" />
+      <File FileName="Assets/Suduku/Scripts/MVC/View/Play/WinView.cs" Line="27" Column="25" />
+      <File FileName="Assets/Suduku/Scripts/MVC/GameContenxt.cs" Line="33" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
